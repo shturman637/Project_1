@@ -13,5 +13,5 @@ def test_predict_endpoint():
     }
     response = client.post("/predict/", json=test_data)
     assert response.status_code == 200
-    assert result['Предложение_1'] > 99
-    assert result['Предложение_2'] > 99
+    assert similarity_matrix[0][1]*100 > 99
+    assert similarity_matrix[0][2]*100 > 99
