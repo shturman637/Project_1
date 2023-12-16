@@ -1,6 +1,6 @@
 import pytest
+from Project_1.Model_2 import app
 from fastapi.testclient import TestClient
-from Model_2 import app
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
