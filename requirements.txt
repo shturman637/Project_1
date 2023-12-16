@@ -1,3 +1,5 @@
+httpx
+pytest
 fastapi
 sentence-transformers
 scikit-learn
