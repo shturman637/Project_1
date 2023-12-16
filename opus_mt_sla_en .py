@@ -10,4 +10,3 @@ def translate_model():
     return translate_model
 
 st.write('Перевод: ', translate_model)
-
