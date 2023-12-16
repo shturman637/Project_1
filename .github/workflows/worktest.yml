@@ -36,8 +36,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest --verbose pytest_gordon/
-    - name: Debug directory contents
-      run: |
-        ls -l
-        ls -l pytest_gordon/
+        python3 -m pytest pytest_gordon/test.py
