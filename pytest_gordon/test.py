@@ -1,5 +1,5 @@
 import pytest
-from Project_1.Model_2 import app
+from Model_3 import app
 from fastapi.testclient import TestClient
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -25,5 +25,8 @@ def test_predict_endpoint():
     
     predictions = response.json()
     
-    assert predictions["similarity_1"] == similarity_matrix[0][1] * 100
-    assert predictions["similarity_2"] == similarity_matrix[0][2] * 100
+    assert "Предложение_1" in predictions
+    assert "Предложение_2" in predictions
+
+    assert predictions["Предложение_1"] == similarity_matrix[0][1] * 100
+    assert predictions["Предложение_2"] == similarity_matrix[0][2] * 100
