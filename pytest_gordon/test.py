@@ -13,7 +13,6 @@ def test_predict_endpoint():
         "Text_1": "Home",
         "Text_2": "Home"
     }
-
     
     sentences = [test_data["Text_source"], test_data["Text_1"], test_data["Text_2"]]
     model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
@@ -23,10 +22,8 @@ def test_predict_endpoint():
     response = client.post("/predict/", json=test_data)
 
     assert response.status_code == 200
-
     
     predictions = response.json()
-
     
     assert predictions["similarity_1"] == similarity_matrix[0][1] * 100
     assert predictions["similarity_2"] == similarity_matrix[0][2] * 100
