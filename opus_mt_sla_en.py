@@ -1,18 +1,10 @@
 from transformers import pipeline
 import streamlit as st
 
-# Установка фоновой картинки через CSS
-st.markdown(
-    """
-    <style>
-        body {
-            background-image: url('https://img.freepik.com/free-vector/neon-lights-background-theme_52683-44625.jpg?w=740&t=st=1702773847~exp=1702774447~hmac=3b762aefe8ac580565d6ebf413b435d78d9e72aa030674d043d18e48fab382b3.jpg');
-            background-size: cover;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# Установка конфигурации страницы
+st.set_page_config(
+page_title="Переводчик со славянских языков на английский",
+page_icon="🧊")
 
 # Содержание страницы
 st.title('Переводчик со славянских языков на английский')
