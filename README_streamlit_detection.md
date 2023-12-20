@@ -3,5 +3,5 @@
 Приложение выдаст результат в виде названия эмоциональной окраски текста:
  no emotion, joy, sadness, surprise, fear, anger, mean.
 
-![screen1](images/screen_1c.png)
-![screen2](images/screen_2c.png)
+![screen1](images/screen_1cc.png)
+![screen2](images/screen_2cc.png)
