@@ -6,6 +6,18 @@ st.set_page_config(
 page_title="Переводчик со славянских языков на английский",
 page_icon="🧊")
 
+# Установка фона страницы
+page_element="""
+<style>
+[data-testid="stAppViewContainer"]{
+  background-image: url("https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg");
+  background-size: cover;
+}
+</style>
+"""
+
+st.markdown(page_element, unsafe_allow_html=True)
+
 # Содержание страницы
 st.title('Переводчик со славянских языков на английский')
 Text_source = st.text_input('Введите текст: ')
