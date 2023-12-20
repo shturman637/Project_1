@@ -29,3 +29,4 @@ def predict(request: ItemRequest):
         Предложение_1=similarity_matrix[0][1] * 100,
         Предложение_2=similarity_matrix[0][2] * 100,
     )
+
