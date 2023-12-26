@@ -10,6 +10,7 @@ class ItemRequest(BaseModel):
 
 class ItemResponse(BaseModel):
     prediction: float
+    result: str
 
 app = FastAPI()
 @app.post("/predict/")
