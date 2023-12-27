@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from huggingface_hub import from_pretrained_keras
 
 class ItemResponse():
-    prediction: float
     result: str
 
 app = FastAPI()
@@ -14,7 +13,7 @@ app = FastAPI()
 async def recognize(file: UploadFile):
     image_data = file.file.read()
     img = Image.open(io.BytesIO(image_data))
-    result = list()
+    img = list()
     
     if img is not None:
         model = from_pretrained_keras("carlosaguayo/cats_vs_dogs")
@@ -36,4 +35,4 @@ async def recognize(file: UploadFile):
         plt.axis("off")
         plt.show()
 
-    return ItemResponse(prediction=prediction, result=result)
+    return ItemResponse(result=result)
