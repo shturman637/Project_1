@@ -6,6 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 client = TestClient(app)
 
+
 def test_predict_endpoint():
 
     test_data = {
@@ -13,8 +14,10 @@ def test_predict_endpoint():
         "Text_1": "Home",
         "Text_2": "Home"
     }
-    
-    sentences = [test_data["Text_source"], test_data["Text_1"], test_data["Text_2"]]
+
+    sentences = [test_data["Text_source"],
+                 test_data["Text_1"],
+                 test_data["Text_2"]]
     model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
     embeddings = model.encode(sentences)
     similarity_matrix = cosine_similarity(embeddings, embeddings)
@@ -22,9 +25,9 @@ def test_predict_endpoint():
     response = client.post("/predict/", json=test_data)
 
     assert response.status_code == 200
-    
+
     predictions = response.json()
-    
+
     assert "Предложение_1" in predictions
     assert "Предложение_2" in predictions
 
