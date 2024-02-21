@@ -1,4 +1,4 @@
-import pytest
+import pytest # noqa: F401
 from Model_3 import app
 from fastapi.testclient import TestClient
 from sentence_transformers import SentenceTransformer
