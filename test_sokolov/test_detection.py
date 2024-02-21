@@ -1,4 +1,4 @@
-import pytest # noqa: F401
+import pytest   # noqa: F401
 from fastapi.testclient import TestClient
 from detection_fast import app
 
