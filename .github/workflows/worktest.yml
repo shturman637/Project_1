@@ -37,4 +37,4 @@ jobs:
     - name: Test with pytest
       run: |
         cd model3_gordon
-        python3 -m pytest model3_gordon/pytest_gordon/test.py
+        python3 -m pytest pytest_gordon/test.py
