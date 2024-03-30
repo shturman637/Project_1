@@ -100,9 +100,3 @@ if result:
     st.write(bot) # Выводим бота (8 компонент)
     st.write("x =",x, "y =", y) # Выводим значения x и y
     st.write("f =", f )
-
-
-
-
-
-
