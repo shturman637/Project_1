@@ -3,7 +3,6 @@ import cv2
 import matplotlib.pyplot as plt
 from huggingface_hub import from_pretrained_keras
 
-
 ROWS = 150
 COLS = 150
 
