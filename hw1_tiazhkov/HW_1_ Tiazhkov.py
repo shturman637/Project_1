@@ -3,7 +3,7 @@ import cv2
 import matplotlib.pyplot as plt
 from huggingface_hub import from_pretrained_keras
 
-ROWS, COLS = 150, 150
+ROWS, COLS = 150, 150 #установка размера изображения
 
 model = from_pretrained_keras("carlosaguayo/cats_vs_dogs")
 
