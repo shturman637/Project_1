@@ -41,8 +41,3 @@ def predict(item: Item):
 def predict2(item: Item):
     """Метод, посредством которого задействуется определение эмоциональной окраски текста, поступившего на вход"""
     return classifier(item.text)[0]
-
-
-
-
-
