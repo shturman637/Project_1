@@ -38,4 +38,3 @@ async def recognize(file: UploadFile):
             plt.show()
 
             return ItemResponse(result=result)
-
