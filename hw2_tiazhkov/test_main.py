@@ -31,6 +31,3 @@ def test_predict_not_empty_answer():
     json_data = response.json()
     assert response.status_code == 200
     assert (len(json_data)) >= 1
-    
-
-
