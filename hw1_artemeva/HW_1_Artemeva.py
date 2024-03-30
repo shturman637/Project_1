@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 from huggingface_hub import from_pretrained_keras
 
 
-COLS = 150
 ROWS = 150
+COLS = 150
+
 
 
 model = from_pretrained_keras("carlosaguayo/cats_vs_dogs")
