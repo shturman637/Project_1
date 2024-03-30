@@ -36,6 +36,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        cd model3_gordon
-        pip install -r requirements.txt
-        python3 -m pytest pytest_gordon/test.py
+         pytest 
