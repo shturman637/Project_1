@@ -4,9 +4,6 @@ import streamlit as st
 import numexpr as ne
 import ast
 
-
-
-
 def getSurvPopul(
         popul,
         val,
@@ -20,8 +17,6 @@ def getSurvPopul(
         newpopul.append(popul[index])  # В новую папуляцию добавляем элемент из текущей популяции с найденным индексом
     return newpopul, sval  # Возвращаем новую популяцию (из nsurv элементов) и сортированный список
 
-
-
 def getParents(
         curr_popul,
         nsurv
@@ -33,9 +28,6 @@ def getParents(
     botp1 = curr_popul[indexp1]  # Получаем первого бота-родителя по indexp1
     botp2 = curr_popul[indexp2]  # Получаем второго бота-родителя по indexp2
     return botp1, botp2  # Возвращаем обоих полученных ботов
-
-
-
 
 def crossPointFrom2Parents(
         botp1,
